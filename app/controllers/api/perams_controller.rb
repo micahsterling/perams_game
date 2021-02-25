@@ -10,10 +10,11 @@ class Api::PeramsController < ApplicationController
   end
 
   def guess
-    @user_guess = params[:userguess].to_i
-    if @user_guess > 44
+    user_guess = params[:userguess].to_i
+    correct_answer = 44
+    if user_guess > correct_answer
       @message = "You guessed too high"
-    elsif @user_guess < 44
+    elsif user_guess < correct_answer
       @message = "You guessed too low"
     else
       @message= "You are correct"

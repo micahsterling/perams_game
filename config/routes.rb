@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   namespace :api do 
     get "/capitalize" => "perams#name_capitalized"
     get "/guess_param/:userguess" => "perams#guess"
+    post "/body_paramater" => "perams#guess"
   end
 end

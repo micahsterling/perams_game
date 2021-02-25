@@ -15,10 +15,11 @@ class Api::PeramsController < ApplicationController
     if user_guess > correct_answer
       @message = "You guessed too high"
     elsif user_guess < correct_answer
-      @message = "You guessed too low"
+      @message = "You guessed too low" 
     else
       @message= "You are correct"
     end
     render 'guess.json.jb'
   end
+
 end
